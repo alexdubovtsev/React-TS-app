@@ -10,6 +10,7 @@ import axios from "axios";
 import List from "./Components/List";
 import UserItem from "./Components/UserItem";
 import TodoItem from "./Components/TodoItem";
+import EventsExample from "./Components/EventsExample";
 
 const App = () => {
   // Определяем тип, который должен быть внутри состояния (массив интерфейса пользователя)
@@ -47,6 +48,7 @@ const App = () => {
 
   return (
     <div>
+      <EventsExample/>
       <Card
         onClick={() => console.log("click")}
         variant={CardVariant.outlined}
