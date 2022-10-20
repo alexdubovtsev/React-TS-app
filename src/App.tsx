@@ -6,12 +6,12 @@
 
 import React, { useEffect, useState } from "react";
 import Card, { CardVariant } from "./Components/Card";
-import UserList from "./Components/UserList";
 
 import EventsExample from "./Components/EventsExample";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import UsersPage from "./Components/UsersPage";
 import TodosPage from "./Components/TodosPage";
+import UserItemPage from "./Components/UserItemPage";
 
 const App = () => {
   return (
@@ -23,9 +23,10 @@ const App = () => {
         </div>
         <Routes>
           <Route path={"/users"} element={<UsersPage/>}/>
+          <Route path={"/users/:id"} element={<UserItemPage/>}/>
           <Route path={"/todos"} element={<TodosPage/>}/>
         </Routes>
-
+        <br /><br /><br /><br />
         <EventsExample />
         <Card
           onClick={() => console.log("click")}
